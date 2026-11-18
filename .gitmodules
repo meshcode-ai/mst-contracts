@@ -1,0 +1,12 @@
+[submodule "upstream/gmx"]
+	path = upstream/gmx
+	url = https://github.com/meshcode-ai/mst-perps.git
+[submodule "upstream/v4-core"]
+	path = upstream/v4-core
+	url = https://github.com/meshcode-ai/mst-amm-v4-core.git
+[submodule "upstream/seaport"]
+	path = upstream/seaport
+	url = https://github.com/meshcode-ai/mst-nft-market.git
+[submodule "upstream/seadrop"]
+	path = upstream/seadrop
+	url = https://github.com/meshcode-ai/meshpet-mint.git

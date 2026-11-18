@@ -1,0 +1,23 @@
+{
+  "name": "@mst/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun script/compile.ts",
+    "test": "bun run build && bun test test/legacy.test.ts",
+    "test:nft": "bun run build && bun test test/nft.test.ts",
+    "deploy:local": "bun script/deploy-local.ts"
+  },
+  "dependencies": {
+    "@opensea/seaport-js": "4.6.0",
+    "@openzeppelin/contracts": "5.1.0",
+    "ethers": "6.17.0",
+    "viem": "2.58.0"
+  },
+  "devDependencies": {
+    "solc": "0.8.24",
+    "@foundry-rs/anvil": "1.7.1",
+    "@foundry-rs/forge": "1.7.1"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-18",
+  "legacy": [
+    {
+      "path": "src/MeshToken.sol",
+      "sha256": "f6d84156da910e70ae3711a25805d518d26dad0f4086fa1c7a0b4b2430633e27",
+      "compiler": "0.8.24",
+      "openzeppelin": "5.1.0",
+      "modified": false
+    },
+    {
+      "path": "src/Meshling.sol",
+      "sha256": "2c1a1e4774ef1afd3e7b000b2070378fdc8de6f2f9972532af265d3f1abd03f0",
+      "compiler": "0.8.24",
+      "openzeppelin": "5.1.0",
+      "modified": false
+    }
+  ],
+  "protocols": [
+    {
+      "path": "upstream/gmx",
+      "repository": "https://github.com/meshcode-ai/mst-perps",
+      "version": "v2.2",
+      "commit": "ee721b7e2d1891312dde52964d774144208cd1a0",
+      "compiler": "0.8.29"
+    },
+    {
+      "path": "upstream/v4-core",
+      "repository": "https://github.com/meshcode-ai/mst-amm-v4-core",
+      "version": "v4.0.0",
+      "commit": "e50237c43811bd9b526eff40f26772152a42daba",
+      "compiler": "0.8.26"
+    },
+    {
+      "path": "upstream/seaport",
+      "repository": "https://github.com/meshcode-ai/mst-nft-market",
+      "version": "1.6",
+      "commit": "e9c5a9f17cb5ee658ccc9cb1a8eeab02c1f5a4cd",
+      "compiler": "0.8.24"
+    },
+    {
+      "path": "upstream/seadrop",
+      "repository": "https://github.com/meshcode-ai/meshpet-mint",
+      "version": "seadrop-1.0",
+      "commit": "368b005b78cbcf35752983eb257afe3a37387285",
+      "compiler": "0.8.17"
+    }
+  ]
+}
