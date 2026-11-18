@@ -25,7 +25,9 @@ await client.waitForTransactionReceipt({hash:await wallet.writeContract(request.
 const result={chainId:31337,mst,pet,legacyPet,seaport,drop,feeRecipient:admin,blockNumber:(await client.getBlockNumber({cacheTime:0})).toString(),environment:'local-fixture',createdAt:new Date().toISOString()}
 mkdirSync(resolve(import.meta.dir,'../deployments'),{recursive:true})
 writeFileSync(resolve(import.meta.dir,'../deployments/local.json'),JSON.stringify(result,null,2)+'\n')
-const path=resolve(import.meta.dir,'../../apps/web/src/data/deployment.json')
-// Optional synchronization when the private landing workspace is present.
-try{const registry=JSON.parse(readFileSync(path,'utf8'));registry['31337']={chainId:31337,mst,pet,seaport,drop,feeRecipient:admin};writeFileSync(path,JSON.stringify(registry,null,2)+'\n')}catch(error){if(!(error&&typeof error==='object'&&'code'in error&&error.code==='ENOENT'))throw error}
+// Optional synchronization; the public contract repo also runs by itself.
+for(const relative of ['../../apps/web/src/data/deployment.json','../../apps/meshpet/src-tauri/deployment.json']){
+  const path=resolve(import.meta.dir,relative)
+  try{const registry=JSON.parse(readFileSync(path,'utf8'));registry['31337']={chainId:31337,mst,pet,seaport,drop,feeRecipient:admin};writeFileSync(path,JSON.stringify(registry,null,2)+'\n')}catch(error){if(!(error&&typeof error==='object'&&'code'in error&&error.code==='ENOENT'))throw error}
+}
 console.log(JSON.stringify(result,null,2))
