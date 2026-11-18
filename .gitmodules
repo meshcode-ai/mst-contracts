@@ -10,3 +10,9 @@
 [submodule "upstream/seadrop"]
 	path = upstream/seadrop
 	url = https://github.com/meshcode-ai/meshpet-mint.git
+[submodule "upstream/v4-periphery"]
+	path = upstream/v4-periphery
+	url = https://github.com/meshcode-ai/mst-amm-v4-periphery.git
+[submodule "upstream/universal-router"]
+	path = upstream/universal-router
+	url = https://github.com/meshcode-ai/mst-amm-universal-router.git

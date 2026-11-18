@@ -9,7 +9,8 @@ No new AMM, perpetuals, NFT market, or oracle Solidity engine is authored here. 
 | MST token | [src/MeshToken.sol](src/MeshToken.sol) | Existing Solidity 0.8.24 / OpenZeppelin 5.1.0 |
 | Legacy pet collection | [src/Meshling.sol](src/Meshling.sol) | Existing owner-minted ERC-721 |
 | AMM | [mst-amm-v4-core](https://github.com/meshcode-ai/mst-amm-v4-core) | Uniswap v4.0.0, `e50237c43811bd9b526eff40f26772152a42daba` |
-| AMM periphery reference | [mst-amm-v4-periphery](https://github.com/meshcode-ai/mst-amm-v4-periphery) | Integration pin recorded separately; no stable tag claimed |
+| AMM periphery | [mst-amm-v4-periphery](https://github.com/meshcode-ai/mst-amm-v4-periphery) | Router dependency pin `a7af5b345b479b05fde9182d7e40913a73b3e18f`; no independent stable tag |
+| AMM Router / Permit2 | [mst-amm-universal-router](https://github.com/meshcode-ai/mst-amm-universal-router) | Git tag 2.2.0, `64027f3372aa235734207c4e05667204f6f927e1` |
 | Perpetuals | [mst-perps](https://github.com/meshcode-ai/mst-perps) | GMX v2.2, `ee721b7e2d1891312dde52964d774144208cd1a0` |
 | NFT settlement | [mst-nft-market](https://github.com/meshcode-ai/mst-nft-market) | Seaport 1.6, `e9c5a9f17cb5ee658ccc9cb1a8eeab02c1f5a4cd` |
 | Public NFT mint | [meshpet-mint](https://github.com/meshcode-ai/meshpet-mint) | SeaDrop seadrop-1.0, `368b005b78cbcf35752983eb257afe3a37387285` |
@@ -39,7 +40,9 @@ bun run test:nft
 
 The NFT integration test uses real upstream contracts: native-ETH public mint, wrong-payment/wallet-cap rejection, an MST fixed-price Seaport sale, duplicate fulfillment rejection, and onchain cancellation. SeaDrop v1 public mint uses ETH, not MST. The original ERC721SeaDrop does not implement ERC-2981; the legacy Meshling contract does. Any royalties must be expressed by the settlement order and are not an automatic token burn.
 
-AMM and perpetuals use their original toolchains:
+The [AMM integration guide](AMM.md) records exact source/SDK pins, original-contract build commands, wallet call flow and test inputs. For real MST/WETH swap and full-range LP tests, run `bun run build:amm` followed by `bun run test:amm`. A separate `bun run deploy:amm:local` adds the pool to the existing local token/NFT deployment.
+
+AMM and perpetuals also retain their original toolchain tests:
 
 ```sh
 cd upstream/v4-core

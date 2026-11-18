@@ -44,6 +44,56 @@
       "version": "seadrop-1.0",
       "commit": "368b005b78cbcf35752983eb257afe3a37387285",
       "compiler": "0.8.17"
+    },
+    {
+      "path": "upstream/v4-periphery",
+      "repository": "https://github.com/meshcode-ai/mst-amm-v4-periphery",
+      "version": "Universal Router 2.2.0 dependency snapshot; no stable periphery tag",
+      "commit": "a7af5b345b479b05fde9182d7e40913a73b3e18f",
+      "compiler": "0.8.26",
+      "bundledCore": "59d3ecf53afa9264a16bba0e38f4c5d2231f80bc"
+    },
+    {
+      "path": "upstream/universal-router",
+      "repository": "https://github.com/meshcode-ai/mst-amm-universal-router",
+      "version": "Git tag 2.2.0 (package metadata 2.1.0)",
+      "commit": "64027f3372aa235734207c4e05667204f6f927e1",
+      "compiler": "0.8.26",
+      "actualGitlinks": {
+        "periphery": "a7af5b345b479b05fde9182d7e40913a73b3e18f",
+        "permit2": "cc56ad0f3439c502c246fc5cfcc3db92bb8b7219"
+      }
+    },
+    {
+      "path": "upstream/v4-periphery/lib/permit2",
+      "repository": "https://github.com/Uniswap/permit2",
+      "version": "Router 2.2.0 dependency snapshot",
+      "commit": "cc56ad0f3439c502c246fc5cfcc3db92bb8b7219",
+      "compiler": "0.8.17",
+      "wethSource": "lib/solmate/src/tokens/WETH.sol"
     }
-  ]
+  ],
+  "ammSdk": {
+    "gitHead": "8ae0425c57e1699b0ae48ebb3077a2f526ae3818",
+    "packages": {
+      "@uniswap/v4-sdk": "2.4.7",
+      "@uniswap/universal-router-sdk": "5.17.0",
+      "@uniswap/sdk-core": "7.22.0",
+      "@uniswap/v3-sdk": "3.31.11"
+    },
+    "lockfile": "bun.lock"
+  },
+  "ammScope": {
+    "chainId": 31337,
+    "fee": 3000,
+    "tickSpacing": 60,
+    "ticks": [
+      -887220,
+      887220
+    ],
+    "hooks": "0x0000000000000000000000000000000000000000",
+    "giwaDeployment": "pending",
+    "protocolSourceModified": false,
+    "guide": "AMM.md"
+  }
 }

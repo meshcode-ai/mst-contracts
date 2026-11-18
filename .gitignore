@@ -1,4 +1,5 @@
 node_modules/
+.build/
 artifacts/
 cache/
 out/
@@ -6,5 +7,6 @@ out/
 .env.*
 !.env.example
 deployments/local.json
+deployments/amm-local.json
 *.log
 .DS_Store

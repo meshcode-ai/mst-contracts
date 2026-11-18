@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "exports": { "./amm": "./sdk/amm.ts" },
   "scripts": {
     "build": "bun script/compile.ts",
+    "build:amm": "bun script/build-amm.ts",
+    "test:amm": "bun test test/amm-input.test.ts test/amm.test.ts",
+    "deploy:amm:local": "bun script/deploy-amm-local.ts",
     "test": "bun run build && bun test test/legacy.test.ts",
     "test:nft": "bun run build && bun test test/nft.test.ts",
     "deploy:local": "bun script/deploy-local.ts"
@@ -12,6 +16,10 @@
   "dependencies": {
     "@opensea/seaport-js": "4.6.0",
     "@openzeppelin/contracts": "5.1.0",
+    "@uniswap/sdk-core": "7.22.0",
+    "@uniswap/universal-router-sdk": "5.17.0",
+    "@uniswap/v3-sdk": "3.31.11",
+    "@uniswap/v4-sdk": "2.4.7",
     "ethers": "6.17.0",
     "viem": "2.58.0"
   },
